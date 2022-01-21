@@ -14,7 +14,7 @@ const config = {
 app.get('/', (req,res) => {
     const connection = mysql.createConnection(config)
 
-    const sql = `INSERT INTO people(name) values ('Filippo')`
+    const sql = `INSERT INTO people(nome) values ('Filippo')`
     connection.query(sql)
     connection.end()
     

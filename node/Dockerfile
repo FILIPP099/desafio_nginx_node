@@ -6,6 +6,6 @@ COPY . .
 
 EXPOSE 3000
 
-ENTRYPOINT [ "npm", "install" ]
+RUN npm install
 
 CMD ["node", "index.js"]
