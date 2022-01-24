@@ -12,13 +12,15 @@ const config = {
 
 
 app.get('/', (req,res) => {
+    var nome = 'Filippo'
+
     const connection = mysql.createConnection(config)
 
-    const sql = `INSERT INTO people(nome) values ('Filippo')`
+    const sql = `INSERT INTO people(nome) values ('${nome}')`
     connection.query(sql)
     connection.end()
     
-    res.send("<h1>Full Cycle Rocks!</h1>")
+    res.send(`<h1>Full Cycle Rocks!</h1><p>Nome Cadastrado:</p><p>${nome}</p>`)
 })
 
 app.listen(3000, () => {
